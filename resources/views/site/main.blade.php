@@ -1,0 +1,1 @@
+<h3>Bem-vindo a página principal! (view)</h3>
