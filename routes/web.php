@@ -3,6 +3,8 @@
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\SobreNosController;
+use App\Http\Controllers\TesteController;
+use App\Http\Controllers\FornecedorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,20 +26,11 @@ Route::get('/login', function (){return "login";});
 //Agrupando rotas para separar rotas públicas de privadas
 Route::prefix('/app')->group(function (){
     Route::get('/clientes', function (){return "Clientes";});
-    Route::get('/fornecedores', function (){return "Fornecedores";});
+    Route::get('/fornecedores', [FornecedorController::class, 'index']);
     Route::get('/produtos',  function (){return "Produtos";});
 });
 
-
-//Exemplos de direcionamento de rotas
-Route::get('/rota1', function (){
-    echo "Rota1";
-});
-
-Route::get('/rota2', function (){
-    //return redirect()->route('/rota1'); //Caso tivesse um name na rota, poderia ser implementado desse jeito
-});
-Route::redirect('/rota2', 'rota1');
+Route::get('/teste/{nome}/{idade}', [TesteController::class, 'teste']);
 
 //Caso o usuário tente acessar qualquer rota inexistente no sistema
 Route::fallback(function(){
