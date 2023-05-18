@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [MainController::class, 'principal']);
-Route::get('/sobre-nos', [SobreNosController::class, 'sobreNos']);
-Route::get('/contato', [ContatoController::class, 'contato']);
+Route::get('/', [MainController::class, 'principal'])->name('/');
+Route::get('/sobre-nos', [SobreNosController::class, 'sobreNos'])->name('sobre-nos');
+Route::get('/contato', [ContatoController::class, 'contato'])->name('contato');
 Route::get('/login', function (){return "login";});
 
 //Agrupando rotas para separar rotas públicas de privadas

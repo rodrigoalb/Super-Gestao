@@ -48,26 +48,26 @@
             }
 
             button {
-                background-color: #7ab829;
+                background-color: #e5e5e5;
                 cursor: pointer;
-                color: #fff;
+                color: #171717;
             }
 
             button:hover {
-                background-color: #6ea22c;
+                background-color: #d4d4d4;
             }
 
-            ::placeholder {
-                color: #333333;
+            ::placeholder-opacity-100 {
+                color: #fafafa;
                 opacity: 1;
             }
 
             :-ms-input-placeholder {
-                color: #333333;
+                color: #fafafa;
             }
 
             ::-ms-input-placeholder {
-                color: #333333;
+                color: #fafafa;
             }
 
             .topo {
@@ -118,14 +118,14 @@
 
             .esquerda {
                 float:left;
-                background-color: #268fd0;
+                background-color: #262626;
                 width: 60%;
                 height: 100%;
             }
 
             .direita {
                 float:right;
-                background-color: #2a9ee2;
+                background-color: #171717;
                 width: 40%;
                 height: 100%;
             }
@@ -207,9 +207,9 @@
 
             <div class="menu">
                 <ul>
-                    <li><a href="{{ route('site.index') }}">Principal</a></li>
-                    <li><a href="{{ route('site.sobrenos') }}">Sobre Nós</a></li>
-                    <li><a href="{{ route('site.contato') }}">Contato</a></li>
+                    <li><a href="{{ route('/') }}">Home</a></li>
+                    <li><a href="{{ route('sobre-nos') }}">Sobre Nós</a></li>
+                    <li><a href="{{ route('contato') }}">Contato</a></li>
                 </ul>
             </div>
         </div>
